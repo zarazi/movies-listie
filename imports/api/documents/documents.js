@@ -20,17 +20,22 @@ Documents.deny({
 Documents.schema = new SimpleSchema({
   title: {
     type: String,
-    label: 'The title of the document.',
+    label: 'Movie title',
   },
-  body: {
+  released: {
+    type: SimpleSchema.Integer,
+    label: 'Released year',
+  },
+  rating: {
     type: String,
-    label: 'The body of the document.',
-  },
+    label: 'Rating',
+  }
 });
 
 Documents.attachSchema(Documents.schema);
 
 Factory.define('document', Documents, {
   title: () => 'Factory Title',
-  body: () => 'Factory Body',
+  release: () => 2017,
+  rating: () => 'G',
 });

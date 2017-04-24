@@ -12,7 +12,8 @@ const handleUpsert = () => {
   const confirmation = doc && doc._id ? 'Document updated!' : 'Document added!';
   const upsert = {
     title: document.querySelector('[name="title"]').value.trim(),
-    body: document.querySelector('[name="body"]').value.trim(),
+    released: parseInt(document.querySelector('[name="released"]').value.trim(), 10),
+    rating: document.querySelector('[name="rating"]').value.trim(),
   };
 
   if (doc && doc._id) upsert._id = doc._id;
@@ -34,16 +35,23 @@ const validate = () => {
       title: {
         required: true,
       },
-      body: {
+      released: {
+        required: true,
+        range:[1800,2100],
+      },
+      rating: {
         required: true,
       },
     },
     messages: {
       title: {
-        required: 'Need a title in here, Seuss.',
+        required: 'Movie title, please.',
       },
-      body: {
-        required: 'This thneeds a body, please.',
+      released: {
+        required: 'Released year, please.',
+      },
+      rating: {
+        required: 'Rating, please.',
       },
     },
     submitHandler() { handleUpsert(); },

@@ -23,17 +23,31 @@ export default class DocumentEditor extends React.Component {
           type="text"
           name="title"
           defaultValue={ doc && doc.title }
-          placeholder="Oh, The Places You'll Go!"
+          placeholder="Title"
         />
       </FormGroup>
       <FormGroup>
-        <ControlLabel>Body</ControlLabel>
+        <ControlLabel>Released year</ControlLabel>
         <FormControl
-          componentClass="textarea"
-          name="body"
-          defaultValue={ doc && doc.body }
-          placeholder="Congratulations! Today is your day. You're off to Great Places! You're off and away!"
+          type="number"
+          min="1800"
+          max="2100"
+          name="released"
+          defaultValue={ doc && doc.released }
+          placeholder="ex. 2012"
         />
+      </FormGroup>
+      <FormGroup>
+        <ControlLabel>Rating</ControlLabel>
+        <FormControl componentClass="select" placeholder="select" name="rating"
+          defaultValue={ doc && doc.rating }>
+          <option value="">select one ..</option>
+          <option value="G">G</option>
+          <option value="PG">PG</option>
+          <option value="M">M</option>
+          <option value="MA">MA</option>
+          <option value="R">R</option>
+        </FormControl>
       </FormGroup>
       <Button type="submit" bsStyle="success">
         { doc && doc._id ? 'Save Changes' : 'Add Document' }
