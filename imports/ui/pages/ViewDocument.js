@@ -4,6 +4,7 @@ import { ButtonToolbar, ButtonGroup, Button } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
 import { Meteor } from 'meteor/meteor';
 import { Bert } from 'meteor/themeteorchef:bert';
+import { Roles } from 'meteor/alanning:roles';
 import Documents from '../../api/documents/documents';
 import { removeDocument } from '../../api/documents/methods';
 import NotFound from './NotFound';
@@ -26,7 +27,14 @@ const handleRemove = (_id) => {
   }
 };
 
+const DeleteAction = ({ doc, canDelete }) => {
+  return canDelete ? (
+    <Button onClick={ () => handleRemove(doc._id) } className="text-danger">Delete</Button>
+  ) : <span></span>
+}
+
 const ViewDocument = ({ doc }) => {
+  const canDelete = Roles.userIsInRole(Meteor.userId(), 'manager');
   return doc ? (
     <div className="ViewDocument">
       <div className="page-header clearfix">
@@ -34,7 +42,7 @@ const ViewDocument = ({ doc }) => {
         <ButtonToolbar className="pull-right">
           <ButtonGroup bsSize="small">
             <Button onClick={ () => handleEdit(doc._id) }>Edit</Button>
-            <Button onClick={ () => handleRemove(doc._id) } className="text-danger">Delete</Button>
+            <DeleteAction doc={doc} canDelete={canDelete}/>
           </ButtonGroup>
         </ButtonToolbar>
       </div>
