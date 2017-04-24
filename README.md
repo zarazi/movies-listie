@@ -1,11 +1,11 @@
-# The Meteor Chef - Base
-A starting point for Meteor apps.
+# Movies Listie
+Just Another Movies List App.
 
 <table>
   <tbody>
     <tr>
-      <th>Base Version</th>
-      <td>v4.15.0</td>
+      <th>App Version</th>
+      <td>v1.0.0</td>
     </tr>
     <tr>
       <th>Meteor Version</th>
@@ -14,4 +14,12 @@ A starting point for Meteor apps.
   </tbody>
 </table>
 
-[Read the Documentation](http://themeteorchef.com/base)
+## Up and running steps:
+1. install meteorjs from [here](https://www.meteor.com/install)
+2. execute these from your terminal:
+```
+ 	$ meteor npm install
+	$ meteor npm run start
+```
+
+

@@ -1,7 +1,7 @@
 {
-  "name": "application-name",
+  "name": "movies-listie",
   "version": "1.0.0",
-  "description": "Application description.",
+  "description": "Just another movies list app",
   "license": "MIT",
   "scripts": {
     "start": "meteor --settings settings-development.json",
