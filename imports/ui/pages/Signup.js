@@ -64,6 +64,15 @@ export default class Signup extends React.Component {
                   placeholder="Password"
                 />
               </FormGroup>
+              <FormGroup>
+                <ControlLabel>Roles</ControlLabel>
+                <FormControl componentClass="select" placeholder="select" name="role">
+                  <option value="">select one ..</option>
+                  <option value="manager">Manager</option>
+                  <option value="teamleader">Team Leader</option>
+                  <option value="floorstaff">Floor Staff</option>
+                </FormControl>
+              </FormGroup>
               <Button type="submit" bsStyle="success">Sign Up</Button>
             </form>
             <p>Already have an account? <Link to="/login">Log In</Link>.</p>

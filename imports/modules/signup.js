@@ -16,11 +16,12 @@ const getUserData = () => ({
       last: document.querySelector('[name="lastName"]').value,
     },
   },
+  role: document.querySelector('[name="role"]').value,
 });
 
 const signup = () => {
   const user = getUserData();
-
+  
   Accounts.createUser(user, (error) => {
     if (error) {
       Bert.alert(error.reason, 'danger');
@@ -48,6 +49,9 @@ const validate = () => {
         required: true,
         minlength: 6,
       },
+      role: {
+        required: true,
+      },
     },
     messages: {
       firstName: {
@@ -63,6 +67,9 @@ const validate = () => {
       password: {
         required: 'Need a password here.',
         minlength: 'Use at least six characters, please.',
+      },
+      role: {
+        required: 'role?',
       },
     },
     submitHandler() { signup(); },
