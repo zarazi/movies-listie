@@ -50,7 +50,7 @@ export default class DocumentEditor extends React.Component {
         </FormControl>
       </FormGroup>
       <Button type="submit" bsStyle="success">
-        { doc && doc._id ? 'Save Changes' : 'Add Document' }
+        { doc && doc._id ? 'Save Changes' : 'Add Movie' }
       </Button>
     </form>);
   }

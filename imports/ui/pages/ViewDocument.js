@@ -38,7 +38,8 @@ const ViewDocument = ({ doc }) => {
           </ButtonGroup>
         </ButtonToolbar>
       </div>
-      { doc && doc.body }
+      Released year: { doc && doc.released }<br/>
+      Rating: { doc && doc.rating }<br/>
     </div>
   ) : <NotFound />;
 };
