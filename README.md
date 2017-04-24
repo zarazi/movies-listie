@@ -9,6 +9,10 @@ Just Another Movies List App.
       <td>v1.0.0</td>
     </tr>
     <tr>
+      <th>Meteor Chef Base Version</th>
+      <td>v4.15.0</td>
+    </tr>
+    <tr>
       <th>Meteor Version</th>
       <td>v1.4.4.1</td>
     </tr>
