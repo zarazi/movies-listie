@@ -15,8 +15,8 @@ const userName = () => {
 const AuthenticatedNavigation = () => (
   <div>
     <Nav>
-      <LinkContainer to="/documents">
-        <NavItem eventKey={ 2 } href="/documents">Movies</NavItem>
+      <LinkContainer to="/movies">
+        <NavItem eventKey={ 2 } href="/movies">Movies</NavItem>
       </LinkContainer>
     </Nav>
     <Nav pullRight>
