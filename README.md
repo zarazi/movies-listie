@@ -6,7 +6,7 @@ Just Another Movies List App.
   <tbody>
     <tr>
       <th>App Version</th>
-      <td>v1.0.0</td>
+      <td>v1.1.0</td>
     </tr>
     <tr>
       <th>Meteor Chef Base Version</th>
@@ -29,9 +29,13 @@ Just Another Movies List App.
 ```
 3: open your browser to http://localhost:3000
 
-##
-### Coming soon features:
+## Change Logs:
+### app-v1.1.0
+* Adding MobX store component
+
+
+## Next
 * REST api endpoints
-* MobX UI states
+
 
 
