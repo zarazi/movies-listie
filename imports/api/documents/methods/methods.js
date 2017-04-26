@@ -1,5 +1,6 @@
 import SimpleSchema from 'simpl-schema';
 import { ValidatedMethod } from 'meteor/mdg:validated-method';
+import { Roles } from 'meteor/alanning:roles';
 import Documents from '../documents';
 import rateLimit from '../../../modules/rate-limit.js';
 
@@ -61,6 +62,9 @@ export const removeDocument = new ValidatedMethod({
   },
 
   run({ _id }) {
+    if (!this.userId || !Roles.userIsInRole(this.userId, 'manager')) {
+      throw new Meteor.Error('not-authorized','Not Authorized');
+    }
     return Documents.remove(_id);
   },
 });
