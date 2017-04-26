@@ -1,2 +1,3 @@
-import '../../api/documents/methods.js';
+import './simple-rest';
+import '../../api/documents/methods';
 import '../../api/documents/server/publications.js';

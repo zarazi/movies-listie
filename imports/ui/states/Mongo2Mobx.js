@@ -10,7 +10,7 @@ export default class Mongo2Mobx {
 
         let moviesDataSync = autorun(() => {
           let refreshMovies = (store) => {
-                let latestMovies = Movies.find().fetch();
+                let latestMovies = Movies.find({},{sort:{released:-1}}).fetch();
                 store.updateMovies(latestMovies);
             };
 

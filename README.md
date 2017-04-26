@@ -6,7 +6,7 @@ Just Another Movies List App.
   <tbody>
     <tr>
       <th>App Version</th>
-      <td>v1.1.0</td>
+      <td>v1.2.0</td>
     </tr>
     <tr>
       <th>Meteor Chef Base Version</th>
@@ -30,6 +30,10 @@ Just Another Movies List App.
 3: open your browser to http://localhost:3000
 
 ## Change Logs:
+
+### app-v1.2.0
+* Adding REST apis [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a94571c19f7be5019509)
+
 ### app-v1.1.0
 * Adding MobX store component
 
