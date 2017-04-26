@@ -6,7 +6,7 @@ import { Meteor } from 'meteor/meteor';
 import { Bert } from 'meteor/themeteorchef:bert';
 import { Roles } from 'meteor/alanning:roles';
 import Documents from '../../api/documents/documents';
-import { removeDocument } from '../../api/documents/methods';
+import { removeDocument } from '../../api/documents/methods/methods';
 import NotFound from './NotFound';
 import container from '../../modules/container';
 
