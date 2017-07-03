@@ -1,6 +1,6 @@
 # Movies Listie
 
-Just Another Movies List App.
+Just Another Movies List App..
 
 <table>
   <tbody>
